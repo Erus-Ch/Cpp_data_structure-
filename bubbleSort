@@ -1,0 +1,39 @@
+template <class KEY, class OTHER>
+void bubbleSort(SET<KEY, OTHER> a[], int size)
+{
+int i, j;
+SET<KEY, OTHER> tmp;
+for (i = 1; i < size; ++i) { 
+  for (j = 0; j <size-i; ++j) 
+    if (a[j+1].key < a[j].key) {
+    tmp = a[j]; a[j] = a[j+1]; a[j+1] = tmp; }
+}
+}
+
+template <class KEY, class OTHER>
+void bubbleSort(SET<KEY, OTHER> a[], int size)
+{
+int i, j;
+SET<KEY, OTHER> tmp;
+for (i = 0; i < size-1; ++i) { //size-1次上浮
+  for (j = size-1; j >i; --j) 
+    if (a[j].key < a[j-1].key) {
+    tmp = a[j]; a[j] = a[j+1]; a[j+1] = tmp; }
+  }
+}
+
+template <class KEY, class OTHER>
+void bubbleSort(SET<KEY, OTHER> a[], int size)
+{
+int i, j;
+SET<KEY, OTHER> tmp;
+bool flag = true; 
+for (i = 1; i < size && flag; ++i) { 
+  flag = false;
+  for (j = 0; j < size-i; ++j)
+    if (a[j+1].key < a[j].key) {
+    tmp = a[j]; a[j] = a[j+1]; a[j+1] = tmp; 
+    flag = true; 
+}
+}
+}
