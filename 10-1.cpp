@@ -34,7 +34,7 @@ void quickSort(SET<KEY, OTHER> a[], int size)
 
 int main()
 {
-	int tmp, size;
+	int tmp, size, a;
 	cin>>size;
 	int A[size];
 	tmp=size;
