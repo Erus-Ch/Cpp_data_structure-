@@ -1,6 +1,6 @@
-//利用二叉堆排序O(NlogN);
-//进行二分查找O(NlogN)
-//总时间复杂度为O（NlogN) 
+//鍒╃敤浜屽弶鍫嗘帓搴廜(NlogN);
+//杩涜浜屽垎鏌ユ壘O(NlogN)
+//鎬绘椂闂村鏉傚害涓篛锛圢logN) 
 
 template <class KEY, class OTHER>
 void searchSum(SET<KEY, OTHER> a[],int size, int k)
@@ -36,7 +36,7 @@ void binarySearch(SET<KEY, OTHER> a[], int size, int p)
 		if (a[high/2]>p)
 			low=high/2;
 		else if (a[high/2]<p)
-			high=high/2;
+			high=high/2; //Closed
 		else 
 			return true;
 			break;
